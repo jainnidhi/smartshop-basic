@@ -1,4 +1,4 @@
-=== SmartShop ===
+=== SmartShop Basic ===
 Contributors: Puneet Sahalot, Nidhi Jain
 Author URI: http://ideaboxthemes.com
 Tags: red, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
