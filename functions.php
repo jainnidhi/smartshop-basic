@@ -416,8 +416,8 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_d
 function smartshop_admin_notice(){
     global $pagenow;
     if ( $pagenow == 'themes.php' ) { ?>
-          <div class="updated">
-              <p>This theme comes with <a href="<?php echo admin_url('customize.php'); ?>">Live Theme Customizer</a> to configure settings and setup home page content. <br/> You can upgrade to <a href="http://ideaboxthemes.com/themes/smartshop-wordpress-theme/">Pro version</a> for more features like multiple slider images, testimonials, color schemes, support and upgrades.</p>
+            <div class="updated" style="background: #FDAF3E; ">
+              <p style="font-size: 16px; color: #fff;">This theme comes with <a href="<?php echo admin_url('customize.php'); ?>" style="color:#fff;">Live Theme Customizer</a> to configure theme options <br/> You can upgrade to <a href="http://ideaboxthemes.com/themes/smartshop-wordpress-theme/" style="color:#fff;"><strong>Pro version</strong></a> for more features like unlimited color schemes, boxed and full width layout options, support and upgrades.</p>
          </div>
    <?php  }
 }
