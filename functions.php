@@ -417,7 +417,7 @@ function smartshop_admin_notice(){
      global $pagenow;
     if ( $pagenow == 'themes.php' || $pagenow == 'index.php') { ?>
             <div class="updated" style="background: #FDAF3E; ">
-              <p style="font-size: 16px; color: #fff;">SmartShop comes with <a href="<?php echo admin_url('customize.php'); ?>" style="color:#fff; text-decoration: underline;">Live Theme Customizer</a> to configure theme options <br/> You can upgrade to <a href="http://ideaboxthemes.com/themes/smartshop-wordpress-theme/" style="color:#fff; text-decoration: underline;"><strong>Pro version</strong></a> for more features like unlimited color schemes, boxed and full width layout options, support and upgrades.</p>
+              <p style="font-size: 16px; color: #fff;">SmartShop comes with <a href="<?php echo admin_url('customize.php'); ?>" style="color:#fff; text-decoration: underline;">Live Theme Customizer</a> to configure theme options <br/> You can upgrade to <a href="http://ideaboxthemes.com/themes/smartshop-wordpress-theme/?ref=basic" style="color:#fff; text-decoration: underline;"><strong>Pro version</strong></a> for more features like unlimited color schemes, boxed and full width layout options, support and upgrades.</p>
          </div>
     <?php  }
 }
