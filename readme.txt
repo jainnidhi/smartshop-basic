@@ -76,14 +76,6 @@ Install by uploading the theme zip file:
 Smartshop Pro WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.
 Smartshop Pro WordPress Theme is distributed under the terms of the GNU GPL
 
-== Credits ==
-
-Smartshop Pro uses the following images licensed under Creative Commons public domain deed CC0
-http://creativecommons.org/publicdomain/zero/1.0/
-
-SmartShop utilises the following awesomeness:
-
-[Featured Image] by Alejandro Escamilla (http://unsplash.com/post/51495156548/download-by-alejandro-escamilla) , which is licensed under CC0 1.0 Universal http://creativecommons.org/publicdomain/zero/1.0 
 
 Font Awesome Copyright Dave Gandy
 Font Awesome is licensed under the MIT license
@@ -92,6 +84,25 @@ source: http://fortawesome.github.io/Font-Awesome
 Open Sans font Copyright Steve Metteson
 Open Sans font is licensed under Apache License 2.0
 source: http://www.google.com/fonts/specimen/Open+Sans
+
+Flexslider Copyright 2012 WooThemes
+Flexslider by WooThemes, licensed under GPLv2 
+source: https://github.com/woothemes/FlexSlider by WooThemes, licensed under GPLv2
+
+Slicknav Copyright 2014 Josh Cope
+Slicknav is licensed under MIT License
+source: https://github.com/ComputerWolf/SlickNav
+
+== Credits ==
+
+Smartshop uses the following images licensed under Creative Commons public domain deed CC0
+http://creativecommons.org/publicdomain/zero/1.0/
+
+Slider Image1 : slide1.jpg Copyright Paul E. Harrer
+Source: http://unsplash.com/post/75618978410/download-by-paul-e-harrer
+
+Slider Image2 : slide2.jpg Copyright Drew Patrick Miller
+source: http://unsplash.com/post/85385371509/download-by-drew-patrick-miller 
 
 = 1.5.1 =
 - Updated 1rem to 10px

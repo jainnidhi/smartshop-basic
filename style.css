@@ -2212,6 +2212,13 @@ IdeaBox Social Icons
         display: none;
     }
     
+    .main-navigation li ul{
+        position:relative;
+    }
+    
+    .main-navigation li ul li a{
+        width:100%;
+    }
     .main-navigation li a{
         display:block;
     }
