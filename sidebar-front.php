@@ -29,11 +29,7 @@
             <li id="slider2"> 
                 <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/slide2.jpg" alt=""/>
             </li>
-            
-            <li id="slider3">
-                <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/slide3.jpg" alt=""/>
-            </li>
-            
+                        
             <?php } ?>
             
              <?php 
@@ -53,32 +49,6 @@
                 </li>
                    <?php } ?>
                 
-               
-                  <?php 
-                   // load third slide
-                   if ( get_theme_mod('slider_three') !='' ) {  ?>
-                <li id="slider3">
-                    <img  src="<?php echo get_theme_mod('slider_three'); ?>" alt=""/>
-                </li>
-                   <?php } ?>
-                
-                
-                 <?php 
-                 // load fourth slide 
-                 if ( get_theme_mod('slider_four') !='' ) {  ?>
-                <li id="slider4"> 
-                    <img  src="<?php echo get_theme_mod('slider_four'); ?>" alt=""/>
-                </li>
-                 <?php } ?>
-                
-                
-                <?php
-                // load fifth slide
-                if ( get_theme_mod('slider_five') !='' ) {  ?>
-                <li id="slider5">  
-                    <img  src="<?php echo get_theme_mod('slider_five'); ?>" alt=""/>
-                </li>
-            <?php } ?>
         <?php } ?>
             
         </ul>
@@ -102,10 +72,11 @@
                      <div class="featured-image"><i class="fa fa-gears"></i></div>
                      <?php } ?>
 
-
-                           <?php if ( get_theme_mod('home_title_one') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('home_title_one')); ?></h3>
+                     <div class="featured-text">
+                           <?php if ( get_theme_mod('home_text_one') !='' ) {  ?><h3><?php echo get_theme_mod('home_text_one'); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Home Featured #1', 'smartshop') ?></h3>
                            <?php } ?>
+                    </div>
             </div>
        
             <div class="col grid_4_of_12 home-widget-two">
@@ -114,12 +85,15 @@
                     <?php } else {  ?>
                      <div class="featured-image"><i class="fa fa-comments"></i></div>
                      <?php } ?>
-
-
-                           <?php if ( get_theme_mod('home_title_two') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('home_title_two')); ?></h3>
+                     
+                     <div class="featured-text">
+                           <?php if ( get_theme_mod('home_text_two') !='' ) {  ?><h3><?php echo get_theme_mod('home_text_two'); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Home Featured #2', 'smartshop') ?></h3>
                            <?php } ?>
+                     </div>
             </div>
+            
+            
             <div class="col grid_4_of_12 home-widget-three">
                 <?php if ( get_theme_mod('home_featured_three') !='' ) {  ?>
                      <div class="featured-image"><?php echo get_theme_mod('home_featured_three'); ?></div>
@@ -127,10 +101,11 @@
                      <div class="featured-image"><i class="fa fa-laptop"></i></div>
                      <?php } ?>
 
-
-                           <?php if ( get_theme_mod('home_title_three') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('home_title_three')); ?></h3>
+                     <div class="featured-text">
+                           <?php if ( get_theme_mod('home_text_three') !='' ) {  ?><h3><?php echo get_theme_mod('home_text_three'); ?></h3>
                   <?php } else {  ?> <h3><?php esc_html_e('Home Featured #3', 'smartshop') ?></h3>
                            <?php } ?>
+                     </div>
             </div>
 
     </div>

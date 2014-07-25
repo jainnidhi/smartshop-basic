@@ -20,7 +20,64 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
+         wp.customize( 'slider_one', function( value ) {
+		value.bind( function( to ) {
+			$( '#slider1 img' ).attr('src', to );
+		} );
+	} );
+       wp.customize( 'slider_two', function( value ) {
+		value.bind( function( to ) {
+			$( '#slider2 img' ).attr('src', to );
+		} );
+	} );
+        wp.customize( 'home_featured_one', function( value ) {
+		value.bind( function( to ) {
+			$( '#home-widget-one .featured-image' ).text( to );
+		} );
+	} );
         
+        wp.customize( 'home_text_one', function( value ) {
+		value.bind( function( to ) {
+			$( 'home-widget-one .featured-text' ).text( to );
+		} );
+	} );
+        
+         wp.customize( 'home_featured_two', function( value ) {
+		value.bind( function( to ) {
+			$( '#home-widget-two .featured-image' ).text( to );
+		} );
+	} );
+        
+        wp.customize( 'home_text_three', function( value ) {
+		value.bind( function( to ) {
+			$( 'home-widget-three .featured-text' ).text( to );
+		} );
+	} );
+        
+        wp.customize( 'cta_title', function( value ) {
+		value.bind( function( to ) {
+			$( '#home-cta h3' ).text( to );
+		} );
+	} );
+        
+         wp.customize( 'cta_text', function( value ) {
+		value.bind( function( to ) {
+			$( '#home-cta p' ).text( to );
+		} );
+	} );
+        
+         wp.customize( 'home_cta_link_url', function( value ) {
+		value.bind( function( to ) {
+			$( '#home-cta .smartshop-cta' ).attr('href', to );
+		} );
+            } );
+                
+         wp.customize( 'home_cta_link_text', function( value ) {
+		value.bind( function( to ) {
+			$( '#home-cta .smartshop-cta' ).text( to );
+		} );
+	} );
+              
         wp.customize( 'smartshop_edd_store_archives_title', function( value ) {
 		value.bind( function( to ) {
 			$( '.store-info h2' ).text( to );

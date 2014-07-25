@@ -763,6 +763,10 @@ button:active {
     text-align:center;
 }
 
+#home-cta p{
+    margin-bottom:15px;
+}
+
 #home-cta ul{
 
     list-style:none;
@@ -780,7 +784,6 @@ button:active {
     padding:10px 15px;
     text-transform:uppercase;
     display: inline-block; 
-    margin-top: 10px; 
 }
 
 #home-cta a:hover,
