@@ -556,16 +556,3 @@ function smartshop_sanitize_checkbox( $input ) {
     }
     return $output;
 }
-
-/*
- * Sanitize layout options 
- * 
- * @since SmartShop 1.4
- */
-function smartshop_sanitize_layout_option($layout_option){
-    if ( ! in_array( $layout_option, array( 'full-width','boxed' ) ) ) {
-		$layout_option = 'boxed';
-	}
-
-	return $layout_option;
-}
