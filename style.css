@@ -1713,6 +1713,7 @@ h4.single-product-price {
 .hentry
 {
     border-bottom:1px solid #ddd;
+    margin-bottom:20px;
 }
 
 .product-content
@@ -2293,15 +2294,6 @@ IdeaBox Social Icons
     .copyright
     {
         border-top:0px;
-    }
-
-
-    #main-content .right-sidebar
-    {
-        width:100% !important;
-        margin-left:20px;
-        padding-right:30px;
-        float:none;
     }
 
     #header .eightcol, #header .col grid_4_of_12
