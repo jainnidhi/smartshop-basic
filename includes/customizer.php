@@ -495,6 +495,66 @@ function smartshop_customizer($wp_customize) {
         'settings' => 'home_title_three',
         'priority' => 2,
     ));
+    
+             // Add new section for Home CTA settings
+        $wp_customize->add_section('home_cta_setting', array(
+            'title' => __('Home CTA', 'smartshop'),
+            'priority' => 55,
+        ));
+
+        $wp_customize->add_setting('cta_title', array(
+                'sanitize_callback' => 'sanitize_text_field',
+                'transport'=> 'postMessage',
+                ));
+        
+        $wp_customize->add_control('cta_title', array(
+            'label' => __('Title', 'smartshop'),
+            'section' => 'home_cta_setting',
+            'settings' => 'cta_title',
+            'priority' => 1,
+           
+        ));
+    
+         $wp_customize->add_setting('cta_text', array('default' => '',
+            'sanitize_callback' => 'sanitize_text_field',
+        'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control(new smartshop_customize_textarea_control($wp_customize, 'cta_text', array(
+            'label' => __('CTA Text', 'smartshop'),
+            'section' => 'home_cta_setting',
+            'settings' => 'cta_text',
+            'priority' => 2,
+        )));
+        
+        
+         // link text
+        $wp_customize->add_setting('home_cta_link_text', array(
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('home_cta_link_text', array(
+            'label' => __('Link Text', 'smartshop'),
+            'section' => 'home_cta_setting',
+            'settings' => 'home_cta_link_text',
+            'priority' => 3,
+            
+        ));
+        
+        // link url
+        $wp_customize->add_setting('home_cta_link_url', array('default' => __('', 'smartshop'),
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'=> 'postMessage',
+            ));
+        
+        $wp_customize->add_control('home_cta_link_url', array(
+            'label' => __('Link URL', 'smartshop'),
+            'section' => 'home_cta_setting',
+            'settings' => 'home_cta_link_url',
+            'priority' => 4,
+            
+        ));
 
     
     if (class_exists('Easy_Digital_Downloads')) {

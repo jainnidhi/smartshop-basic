@@ -706,6 +706,10 @@ button:active {
     line-height:1.6;
 }
 
+#featured-widgets .flexslider{
+    margin-bottom:0;
+}
+
 
 #featured-widgets .widget_title
 {
@@ -736,6 +740,7 @@ button:active {
 #home-cta{
     padding:15px 22px;
     color:#fff;
+    text-align:center;
 }
 
 .home-cta-widget
@@ -749,7 +754,7 @@ button:active {
     text-align:center;
 }
 
-#home-cta .widget_title
+#home-cta h3
 {
     font-size:22px;
     font-weight:300;
@@ -794,7 +799,7 @@ button:active {
 
 #home-widgets
 {
-    padding:15px 0 25px;
+    padding:25px 0;
     background:#fff;
     text-align:center;
 }

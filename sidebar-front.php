@@ -142,20 +142,24 @@
         <div class="row" id="home-cta">
 
             <div class="col grid_12_of_12">
+            
+                    <?php if ( get_theme_mod('cta_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('cta_title')); ?></h3>
+                          <?php } else {  ?> <h3><?php esc_html_e('Home CTA', 'smartshop') ?></h3>
+                               <?php } ?>			
+                        <?php if ( get_theme_mod('cta_text') !='' ) {  ?>
+                        <p><?php echo esc_html(get_theme_mod('cta_text')); ?></p>
+                           <?php } else { ?>
+                          <p><?php esc_html_e('This is Home CTA widget area to add some Call to Action text and button.', 'smartshop') ?> </p>
+                            <?php } ?>
+                          
+                            <a class="smartshop-cta" href="<?php if ( get_theme_mod('home_cta_link_url') !='' ) { echo esc_url(get_theme_mod('home_cta_link_url')); } ?>">
+                           <?php if ( get_theme_mod('home_cta_link_text') !='' ) {  ?><?php echo esc_html(get_theme_mod('home_cta_link_text')); ?>
+
+                    <?php } else {  ?> <?php esc_html_e('Get Started', 'smartshop') ?>
+                           <?php } ?></a>
+                        
                    
-            <?php 
-            // Check if home CTA sidebar is active 
-                if (is_active_sidebar('home_cta')) { 
-                    dynamic_sidebar('home_cta');
-                } else { ?>
-                    <div class="home-cta-widget widget_text">
-                        <h3 class="widget_title">Home CTA Widget</h3>			
-                        <div class="textwidget">
-                            <p><?php _e('This is Home CTA widget area to add some Call to Action text and button','smartshop'); ?></p>
-                            <p><a href="#" class="smartshop-cta"><?php _e('Get started','smartshop'); ?></a></p>
-                        </div>
-                    </div>
-                <?php } ?>
+              
             </div>
 
         </div> <!--end .row --> 
