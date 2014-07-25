@@ -14,19 +14,74 @@
 
         <div class="row" id="featured-widgets">
 
-            <div class="col grid_12_of_12 last">
+            <div class="flexslider">
 
+               <ul class="slides">
+            <?php
+            // check if the slider is blank.
+            // if there are no slides by user then load default slides. 
+            if ( get_theme_mod('slider_one') =='' ) {  ?>
+                <li id="slider1">
+                    <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/slide1.jpg" alt=""/>
+             </li>
+            
+             
+            <li id="slider2"> 
+                <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/slide2.jpg" alt=""/>
+            </li>
+            
+            <li id="slider3">
+                <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/slide3.jpg" alt=""/>
+            </li>
+            
+            <?php } ?>
+            
+             <?php 
+             // if user adds a cusotm slide then display the slides 
+          // load first slide
+            if ( get_theme_mod('slider_one') !='' ) {  ?>
+                    <li id="slider1">
+                    <img  src="<?php echo get_theme_mod('slider_one'); ?>" alt=""/>
+                </li>
+                
+               
+                  <?php
+                   // load second slide 
+                   if ( get_theme_mod('slider_two') !='' ) {  ?>
+                <li id="slider2">
+                    <img  src="<?php echo get_theme_mod('slider_two'); ?>" alt=""/>
+                </li>
+                   <?php } ?>
+                
+               
+                  <?php 
+                   // load third slide
+                   if ( get_theme_mod('slider_three') !='' ) {  ?>
+                <li id="slider3">
+                    <img  src="<?php echo get_theme_mod('slider_three'); ?>" alt=""/>
+                </li>
+                   <?php } ?>
+                
+                
+                 <?php 
+                 // load fourth slide 
+                 if ( get_theme_mod('slider_four') !='' ) {  ?>
+                <li id="slider4"> 
+                    <img  src="<?php echo get_theme_mod('slider_four'); ?>" alt=""/>
+                </li>
+                 <?php } ?>
+                
+                
                 <?php
-                if (is_active_sidebar('home-featured')) {
-                    dynamic_sidebar('home-featured');
-                } 
-                else { ?>
-                    <div class="widget widget_text">			
-                        <div class="textwidget">
-                            <img src="<?php echo get_template_directory_uri().'/assets/images/featured.jpg'; ?>" />
-                        </div>
-                    </div>
-                <?php } ?>
+                // load fifth slide
+                if ( get_theme_mod('slider_five') !='' ) {  ?>
+                <li id="slider5">  
+                    <img  src="<?php echo get_theme_mod('slider_five'); ?>" alt=""/>
+                </li>
+            <?php } ?>
+        <?php } ?>
+            
+        </ul>
 
             </div>
 
@@ -41,44 +96,41 @@
 
             
             <div class="col grid_4_of_12 home-widget-one">
-                <?php if (is_active_sidebar('home_one')) { 
-                    dynamic_sidebar('home_one'); 
-                } 
-                else { ?>
-                <div class="home-widget widget_text">			
-                        <div class="textwidget">
-                            <p><i class="fa fa-gears"></i></p>
-                            <center><?php _e('Home #1 Widget','smartshop'); ?></center>
-                        </div>
-                    </div>
-                <?php } ?>
+                <?php if ( get_theme_mod('home_featured_one') !='' ) {  ?>
+                     <div class="featured-image"><?php echo get_theme_mod('home_featured_one'); ?></div>
+                    <?php } else {  ?>
+                     <div class="featured-image"><i class="fa fa-gears"></i></div>
+                     <?php } ?>
+
+
+                           <?php if ( get_theme_mod('home_title_one') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('home_title_one')); ?></h3>
+                  <?php } else {  ?> <h3><?php esc_html_e('Home Featured #1', 'smartshop') ?></h3>
+                           <?php } ?>
             </div>
        
             <div class="col grid_4_of_12 home-widget-two">
-                <?php
-                if (is_active_sidebar('home_two')) {
-                    dynamic_sidebar('home_two');
-                } else { ?>
-                    <div class="home-widget widget_text">			
-                        <div class="textwidget">
-                            <p><i class="fa fa-comments"></i></p>
-                            <center><?php _e('Home #2 Widget','smartshop'); ?></center>
-                        </div>
-                    </div>
-            <?php } ?>
+                <?php if ( get_theme_mod('home_featured_two') !='' ) {  ?>
+                     <div class="featured-image"><?php echo get_theme_mod('home_featured_two'); ?></div>
+                    <?php } else {  ?>
+                     <div class="featured-image"><i class="fa fa-comments"></i></div>
+                     <?php } ?>
+
+
+                           <?php if ( get_theme_mod('home_title_two') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('home_title_two')); ?></h3>
+                  <?php } else {  ?> <h3><?php esc_html_e('Home Featured #2', 'smartshop') ?></h3>
+                           <?php } ?>
             </div>
             <div class="col grid_4_of_12 home-widget-three">
-                <?php
-                if (is_active_sidebar('home_three')) {
-                    dynamic_sidebar('home_three');
-                } else { ?>
-                    <div class="home-widget widget_text">			
-                        <div class="textwidget">
-                            <p><i class="fa fa-laptop"></i></p>
-                            <center><?php _e('Home #3 Widget','smartshop'); ?></center>
-                        </div>
-                    </div>
-            <?php } ?>
+                <?php if ( get_theme_mod('home_featured_three') !='' ) {  ?>
+                     <div class="featured-image"><?php echo get_theme_mod('home_featured_three'); ?></div>
+                    <?php } else {  ?>
+                     <div class="featured-image"><i class="fa fa-laptop"></i></div>
+                     <?php } ?>
+
+
+                           <?php if ( get_theme_mod('home_title_three') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('home_title_three')); ?></h3>
+                  <?php } else {  ?> <h3><?php esc_html_e('Home Featured #3', 'smartshop') ?></h3>
+                           <?php } ?>
             </div>
 
     </div>

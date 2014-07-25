@@ -93,12 +93,20 @@ function smartshop_load_scripts() {
 
         // Adds JavaScript for handling the navigation menu hide-and-show behavior.
         wp_enqueue_script('smartshop-navigation', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js', array(), '1.0', true);
-
+        
+        wp_enqueue_script('smartshop-custom-scripts', get_template_directory_uri() . '/assets/js/custom-scripts.js', array(), '1.0', 'all', false);
+        
+         wp_enqueue_script('jquery'); 
+        
+        wp_enqueue_script('smartshop-slider', get_template_directory_uri() . '/assets/js/jquery.flexslider.js', array('jquery'));
+        
+        wp_enqueue_style( 'flexslider', trailingslashit( get_template_directory_uri() ) . 'assets/css/flexslider.css' , array(), '1.0', 'all' );
+        
         // Enqueue the default WordPress stylesheet
 	wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.5.1', 'all' );
         
          wp_enqueue_style( 'smartshop-woocommerce', trailingslashit( get_template_directory_uri() ) . 'assets/css/smartshop-woocommerce.css' , array(), '1.0', 'all' );
-}
+}       
 
 add_action('wp_enqueue_scripts', 'smartshop_load_scripts');
 
@@ -320,21 +328,6 @@ function smartshop_filter_front_page_template( $template ) {
      return is_home() ? '' : $template ;
 }
 add_filter( 'frontpage_template', 'smartshop_filter_front_page_template' );
-
-
-if (!function_exists('smartshop_footer_js')) {
-    function smartshop_footer_js() { ?>
-            <script>     
-
-            jQuery(document).ready(function($) {   
-
-            $('#main-nav #site-navigation ul').slicknav({prependTo:'#mobile-menu'});
-
-            });
-            </script>
-        <?php }
-}
-add_action( 'wp_footer', 'smartshop_footer_js', 20, 1 );
 
 
 // Add Envira License key

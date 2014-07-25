@@ -796,6 +796,7 @@ button:active {
 {
     padding:15px 0 25px;
     background:#fff;
+    text-align:center;
 }
 .home-widget-one, 
 .home-widget-two, 
@@ -806,9 +807,7 @@ button:active {
     background:#f4f4f4;
 }
 
-.home-widget-one .widget_title,
-.home-widget-two .widget_title,
-.home-widget-three .widget_title
+#home-widgets h3
 {
     font-size:22px;
     font-weight:300;

@@ -57,7 +57,446 @@ function smartshop_customizer($wp_customize) {
         }
 
     }
+    
+    
+    // Add new section for slider settings
+    $wp_customize->add_section('home_slider_setting', array(
+        'title' => __('Home Slider', 'smartshop'),
+        'priority' => 37,
+    ));
 
+    $wp_customize->add_setting('slider_one', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'slider_one', array(
+        'label' => 'Slider 1',
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_one',
+        'priority' => 1,
+            )
+            )
+    );
+
+    // slider Title
+    $wp_customize->add_setting('slider_title_one', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_title_one', array(
+        'label' => __('Slider One Title', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_title_one',
+        'priority' => 2,
+    ));
+
+    $wp_customize->add_setting('slider_one_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new smartshop_customize_textarea_control($wp_customize, 'slider_one_description', array(
+        'label' => __('Description', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_one_description',
+        'priority' => 3,
+    )));
+
+    // link text
+    $wp_customize->add_setting('slider_one_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_one_link_text', array(
+        'label' => __('Slider One Link Text', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_one_link_text',
+        'priority' => 4,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_one_link_url', array('default' => __('', 'smartshop'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_one_link_url', array(
+        'label' => __('Slider One Link URL', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_one_link_url',
+        'priority' => 5,
+    ));
+
+    $wp_customize->add_setting('slider_two', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'slider_two', array(
+        'label' => 'Slider 2',
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_two',
+        'priority' => 6,
+            )
+            )
+    );
+
+    // slider Title
+    $wp_customize->add_setting('slider_title_two', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_title_two', array(
+        'label' => __('Slider Two Title', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_title_two',
+        'priority' => 7,
+    ));
+
+    $wp_customize->add_setting('slider_two_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new smartshop_customize_textarea_control($wp_customize, 'slider_two_description', array(
+        'label' => __('Description', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_two_description',
+        'priority' => 8,
+    )));
+
+    // link text
+    $wp_customize->add_setting('slider_two_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_two_link_text', array(
+        'label' => __('Slider Two Link Text', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_two_link_text',
+        'priority' => 9,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_two_link_url', array('default' => __('', 'smartshop'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_two_link_url', array(
+        'label' => __('Slider Two Link URL', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_two_link_url',
+        'priority' => 10,
+    ));
+
+
+    $wp_customize->add_setting('slider_three', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'slider_three', array(
+        'label' => 'Slider 3',
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_three',
+        'priority' => 11,
+            )
+            )
+    );
+
+
+    // slider Title
+    $wp_customize->add_setting('slider_title_three', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_title_three', array(
+        'label' => __('Slider Three Title', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_title_three',
+        'priority' => 12,
+    ));
+
+    $wp_customize->add_setting('slider_three_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new smartshop_customize_textarea_control($wp_customize, 'slider_three_description', array(
+        'label' => __('Description', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_three_description',
+        'priority' => 13,
+    )));
+
+    // link text
+    $wp_customize->add_setting('slider_three_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_three_link_text', array(
+        'label' => __('Slider Three Link Text', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_three_link_text',
+        'priority' => 14,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_three_link_url', array('default' => __('', 'smartshop'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_three_link_url', array(
+        'label' => __('Slider Three Link URL', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_three_link_url',
+        'priority' => 15,
+    ));
+
+    $wp_customize->add_setting('slider_four', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'slider_four', array(
+        'label' => 'Slider 4',
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_four',
+        'priority' => 16,
+            )
+            )
+    );
+
+    // slider Title
+    $wp_customize->add_setting('slider_title_four', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_title_four', array(
+        'label' => __('Slider Four Title', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_title_four',
+        'priority' => 17,
+    ));
+
+    $wp_customize->add_setting('slider_four_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new smartshop_customize_textarea_control($wp_customize, 'slider_four_description', array(
+        'label' => __('Description', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_four_description',
+        'priority' => 18,
+    )));
+
+
+    // link text
+    $wp_customize->add_setting('slider_four_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_four_link_text', array(
+        'label' => __('Slider Four Link Text', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_four_link_text',
+        'priority' => 19,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_four_link_url', array('default' => __('', 'smartshop'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_four_link_url', array(
+        'label' => __('Slider Four Link URL', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_four_link_url',
+        'priority' => 20,
+    ));
+
+    $wp_customize->add_setting('slider_five', array(
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+            $wp_customize, 'slider_five', array(
+        'label' => 'Slider 5',
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_five',
+        'priority' => 21,
+            )
+            )
+    );
+
+    // slider Title
+    $wp_customize->add_setting('slider_title_five', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_title_five', array(
+        'label' => __('Slider Five Title', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_title_five',
+        'priority' => 22,
+    ));
+
+    $wp_customize->add_setting('slider_five_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new smartshop_customize_textarea_control($wp_customize, 'slider_five_description', array(
+        'label' => __('Description', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_five_description',
+        'priority' => 23,
+    )));
+
+    // link text
+    $wp_customize->add_setting('slider_five_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_five_link_text', array(
+        'label' => __('Slider Five Link Text', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_five_link_text',
+        'priority' => 24,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_five_link_url', array('default' => __('', 'smartshop'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_five_link_url', array(
+        'label' => __('Slider Five Link URL', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_five_link_url',
+        'priority' => 25,
+    ));
+    
+    // Add new section for Home Featured One settings
+    $wp_customize->add_section('home_featured_one_setting', array(
+        'title' => __('Home Featured #1', 'smartshop'),
+        'priority' => 40,
+    ));
+
+
+    $wp_customize->add_setting('home_featured_one', array(
+        'sanitize_callback' => 'smartshop_sanitize_text',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('home_featured_one', array(
+        'label' => __('Featured One Icon', 'smartshop'),
+        'section' => 'home_featured_one_setting',
+        'settings' => 'home_featured_one',
+        'priority' => 1,
+    ));
+
+    // home Title
+    $wp_customize->add_setting('home_title_one', array(
+        'sanitize_callback' => 'smartshop_sanitize_text',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('home_title_one', array(
+        'label' => __('Title', 'smartshop'),
+        'section' => 'home_featured_one_setting',
+        'settings' => 'home_title_one',
+        'priority' => 2,
+    ));
+
+   
+    // Add new section for Home Featured Two settings
+    $wp_customize->add_section('home_featured_two_setting', array(
+        'title' => __('Home Featured #2', 'smartshop'),
+        'priority' => 45,
+    ));
+
+
+   $wp_customize->add_setting('home_featured_two', array(
+        'sanitize_callback' => 'smartshop_sanitize_text',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('home_featured_two', array(
+        'label' => __('Featured Two Icon', 'smartshop'),
+        'section' => 'home_featured_two_setting',
+        'settings' => 'home_featured_two',
+        'priority' => 1,
+    ));
+
+    // home Title
+    $wp_customize->add_setting('home_title_two', array(
+        'sanitize_callback' => 'smartshop_sanitize_text',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('home_title_two', array(
+        'label' => __('Title', 'smartshop'),
+        'section' => 'home_featured_two_setting',
+        'settings' => 'home_title_two',
+        'priority' => 2,
+    ));
+
+    
+    // Add new section for Home Featured Three settings
+    $wp_customize->add_section('home_featured_three_setting', array(
+        'title' => __('Home Featured #3', 'smartshop'),
+        'priority' => 50,
+    ));
+
+
+    $wp_customize->add_setting('home_featured_three', array(
+        'sanitize_callback' => 'smartshop_sanitize_text',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('home_featured_three', array(
+        'label' => __('Featured Three Icon', 'smartshop'),
+        'section' => 'home_featured_three_setting',
+        'settings' => 'home_featured_three',
+        'priority' => 1,
+    ));
+
+    // home Title
+    $wp_customize->add_setting('home_title_three', array(
+        'sanitize_callback' => 'smartshop_sanitize_text',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('home_title_three', array(
+        'label' => __('Title', 'smartshop'),
+        'section' => 'home_featured_three_setting',
+        'settings' => 'home_title_three',
+        'priority' => 2,
+    ));
+
+    
     if (class_exists('Easy_Digital_Downloads')) {
         $wp_customize->add_section('smartshop_edd_options', array(
             'title' => __('Easy Digital Downloads', 'smartshop'),
@@ -300,6 +739,20 @@ function smartshop_customizer($wp_customize) {
 }
 
 add_action('customize_register', 'smartshop_customizer', 11);
+
+
+/*
+ * 
+ * sanitize Text field
+ * 
+ * @since Smartshop 1.4
+ * 
+ */
+
+function smartshop_sanitize_text($input) {
+    return wp_kses_post(force_balance_tags($input));
+}
+
 
 /* 
  * Sanitize Hex Color for 
