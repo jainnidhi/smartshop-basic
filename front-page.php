@@ -11,8 +11,9 @@
 
 get_header();
 
-// call front page sidebars
-get_sidebar('front');
+// display featured sections 
+get_template_part('content', 'front-featured');
+
 ?>
 
 <div id="main-content-container" class="container">    

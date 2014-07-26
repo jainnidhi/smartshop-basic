@@ -1,12 +1,9 @@
 <?php
 /**
- *  Front page sidebars for 
- * 
- *  Home Featured
+ *  This file displays 
  *  Home CTA
  *  Home #1, Home #2 and Home #3
  */
-// Check if home featured sidebar is active. Yes, then output the relevant HTML else exit. 
 
 ?>
 
