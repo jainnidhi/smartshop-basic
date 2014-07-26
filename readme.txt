@@ -81,8 +81,8 @@ Font Awesome Copyright Dave Gandy
 Font Awesome is licensed under the MIT license
 source: http://fortawesome.github.io/Font-Awesome
 
-Open Sans font Copyright Steve Metteson
-Open Sans font is licensed under Apache License 2.0
+Raleway font Copyright Steve Metteson
+Raleway font is licensed under Apache License 2.0
 source: http://www.google.com/fonts/specimen/Open+Sans
 
 Flexslider Copyright 2012 WooThemes

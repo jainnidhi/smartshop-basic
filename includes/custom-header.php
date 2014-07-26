@@ -96,7 +96,7 @@ function smartshop_admin_header_style() {
 	<style type="text/css" id="smartshop-admin-header-css">
 	.appearance_page_custom-header #headimg {
 		border: none;
-		font-family: "Open Sans", Helvetica, Arial, sans-serif;
+		font-family: "Raleway", Helvetica, Arial, sans-serif;
 	}
 	#headimg h1,
 	#headimg h2 {

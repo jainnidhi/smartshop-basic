@@ -34,7 +34,7 @@ add_action('customize_register', 'smartshop_customize_register', 12);
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function smartshop_customize_preview_js() {
-    wp_enqueue_script('smartshop_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array('customize-preview'), '20130508', true);
+    wp_enqueue_script('smartshop_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array('customize-preview'), '20140726', true);
 }
 
 add_action('customize_preview_init', 'smartshop_customize_preview_js');
@@ -79,6 +79,57 @@ function smartshop_customizer($wp_customize) {
             )
             )
     );
+    
+    // slider Title
+    $wp_customize->add_setting('slider_title_one', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_title_one', array(
+        'label' => __('Slider One Title', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_title_one',
+        'priority' => 2,
+    ));
+
+    $wp_customize->add_setting('slider_one_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new smartshop_customize_textarea_control($wp_customize, 'slider_one_description', array(
+        'label' => __('Description', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_one_description',
+        'priority' => 3,
+    )));
+
+    // link text
+    $wp_customize->add_setting('slider_one_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_one_link_text', array(
+        'label' => __('Slider One Link Text', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_one_link_text',
+        'priority' => 4,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_one_link_url', array('default' => __('', 'smartshop'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_one_link_url', array(
+        'label' => __('Slider One Link URL', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_one_link_url',
+        'priority' => 5,
+    ));
 
    
     $wp_customize->add_setting('slider_two', array(
@@ -95,6 +146,45 @@ function smartshop_customizer($wp_customize) {
             )
             )
     );
+
+    
+    $wp_customize->add_setting('slider_two_description', array('default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control(new smartshop_customize_textarea_control($wp_customize, 'slider_two_description', array(
+        'label' => __('Description', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_two_description',
+        'priority' => 8,
+    )));
+
+    // link text
+    $wp_customize->add_setting('slider_two_link_text', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_two_link_text', array(
+        'label' => __('Slider Two Link Text', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_two_link_text',
+        'priority' => 9,
+    ));
+
+    // link url
+    $wp_customize->add_setting('slider_two_link_url', array('default' => __('', 'smartshop'),
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('slider_two_link_url', array(
+        'label' => __('Slider Two Link URL', 'smartshop'),
+        'section' => 'home_slider_setting',
+        'settings' => 'slider_two_link_url',
+        'priority' => 10,
+    ));
 
        
     // Add new section for Home Featured One settings
@@ -115,7 +205,20 @@ function smartshop_customizer($wp_customize) {
         'settings' => 'home_featured_one',
         'priority' => 1,
     ));
+    
+    // home Title
+    $wp_customize->add_setting('home_title_one', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
 
+    $wp_customize->add_control('home_title_one', array(
+        'label' => __('Title', 'superb'),
+        'section' => 'home_featured_one_setting',
+        'settings' => 'home_title_one',
+        'priority' => 2,
+    ));
+    
     $wp_customize->add_setting('home_text_one', array('default' => '',
         'sanitize_callback' => 'smartshop_sanitize_text',
         'transport' => 'postMessage',
@@ -148,6 +251,20 @@ function smartshop_customizer($wp_customize) {
         'priority' => 1,
     ));
 
+
+    // home Title
+    $wp_customize->add_setting('home_title_two', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('home_title_two', array(
+        'label' => __('Title', 'superb'),
+        'section' => 'home_featured_two_setting',
+        'settings' => 'home_title_two',
+        'priority' => 2,
+    ));
+    
     $wp_customize->add_setting('home_text_two', array('default' => '',
         'sanitize_callback' => 'smartshop_sanitize_text',
         'transport' => 'postMessage',
@@ -178,6 +295,19 @@ function smartshop_customizer($wp_customize) {
         'section' => 'home_featured_three_setting',
         'settings' => 'home_featured_three',
         'priority' => 1,
+    ));
+
+    // home Title
+    $wp_customize->add_setting('home_title_three', array(
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'postMessage',
+    ));
+
+    $wp_customize->add_control('home_title_three', array(
+        'label' => __('Title', 'superb'),
+        'section' => 'home_featured_three_setting',
+        'settings' => 'home_title_three',
+        'priority' => 2,
     ));
 
     $wp_customize->add_setting('home_text_three', array('default' => '',

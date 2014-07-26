@@ -10,7 +10,7 @@
 <?php
 // Start a new query for displaying featured posts on Front Page
 
-if (get_theme_mod('smartshop_front_featured_posts_check')) {
+if (0 != get_theme_mod('smartshop_front_featured_posts_check')) {
     $featured_count = absint(get_theme_mod('smartshop_front_featured_posts_count'));
     $var = get_theme_mod('smartshop_front_featured_posts_cat');
 
