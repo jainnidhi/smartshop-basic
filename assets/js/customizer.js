@@ -32,25 +32,25 @@
 	} );
         wp.customize( 'home_featured_one', function( value ) {
 		value.bind( function( to ) {
-			$( '#home-widget-one .featured-image' ).text( to );
+			$( '.home-widget-one .featured-image' ).text( to );
 		} );
 	} );
         
         wp.customize( 'home_text_one', function( value ) {
 		value.bind( function( to ) {
-			$( 'home-widget-one .featured-text' ).text( to );
+			$( '.home-widget-one .featured-text' ).text( to );
 		} );
 	} );
         
          wp.customize( 'home_featured_two', function( value ) {
 		value.bind( function( to ) {
-			$( '#home-widget-two .featured-image' ).text( to );
+			$( '.home-widget-two .featured-image' ).text( to );
 		} );
 	} );
         
         wp.customize( 'home_text_three', function( value ) {
 		value.bind( function( to ) {
-			$( 'home-widget-three .featured-text' ).text( to );
+			$( '.home-widget-three .featured-text' ).text( to );
 		} );
 	} );
         

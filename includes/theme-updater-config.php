@@ -10,7 +10,7 @@
 // This is the URL our updater / license checker pings. This should be the URL of the site with Smartshop installed
 define('IDEABOX_STORE_URL', 'http://ideaboxthemes.com'); // add your own unique prefix to prevent conflicts
 // The name of your product. This should match the download name in Smartshop exactly
-define('IDEABOX_THEME_NAME', 'SmartShop WordPress Theme'); // add your own unique prefix to prevent conflicts
+define('IDEABOX_THEME_NAME', 'SmartShop Lite – Free Responsive WordPress Theme'); // add your own unique prefix to prevent conflicts
 
 function smartshop_theme_updater() {
 
@@ -18,7 +18,7 @@ function smartshop_theme_updater() {
 
     $smartshop_updater = new smartshop_SL_Theme_Updater(array(
         'remote_api_url' => IDEABOX_STORE_URL, // Our store URL that is running smartshop
-        'version' => '1.5.1', // The current theme version we are running
+        'version' => '1.5.2', // The current theme version we are running
         'license' => $test_license, // The license key (used get_option above to retrieve from DB)
         'item_name' => IDEABOX_THEME_NAME, // The name of this theme
         'author' => 'IdeaBox Themes' // The author's name

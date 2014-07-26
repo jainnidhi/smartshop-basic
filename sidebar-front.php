@@ -73,8 +73,8 @@
                      <?php } ?>
 
                      <div class="featured-text">
-                           <?php if ( get_theme_mod('home_text_one') !='' ) {  ?><h3><?php echo get_theme_mod('home_text_one'); ?></h3>
-                  <?php } else {  ?> <h3><?php esc_html_e('Home Featured #1', 'smartshop') ?></h3>
+                           <?php if ( get_theme_mod('home_text_one') !='' ) {  ?><p><?php echo get_theme_mod('home_text_one'); ?></p>
+                  <?php } else {  ?> <p><?php esc_html_e('Home Featured #1', 'smartshop') ?></p>
                            <?php } ?>
                     </div>
             </div>
@@ -87,8 +87,8 @@
                      <?php } ?>
                      
                      <div class="featured-text">
-                           <?php if ( get_theme_mod('home_text_two') !='' ) {  ?><h3><?php echo get_theme_mod('home_text_two'); ?></h3>
-                  <?php } else {  ?> <h3><?php esc_html_e('Home Featured #2', 'smartshop') ?></h3>
+                           <?php if ( get_theme_mod('home_text_two') !='' ) {  ?><p><?php echo get_theme_mod('home_text_two'); ?></p>
+                  <?php } else {  ?> <p><?php esc_html_e('Home Featured #2', 'smartshop') ?></p>
                            <?php } ?>
                      </div>
             </div>
@@ -102,8 +102,8 @@
                      <?php } ?>
 
                      <div class="featured-text">
-                           <?php if ( get_theme_mod('home_text_three') !='' ) {  ?><h3><?php echo get_theme_mod('home_text_three'); ?></h3>
-                  <?php } else {  ?> <h3><?php esc_html_e('Home Featured #3', 'smartshop') ?></h3>
+                           <?php if ( get_theme_mod('home_text_three') !='' ) {  ?><p><?php echo get_theme_mod('home_text_three'); ?></p>
+                  <?php } else {  ?> <p><?php esc_html_e('Home Featured #3', 'smartshop') ?></p>
                            <?php } ?>
                      </div>
             </div>
@@ -118,8 +118,8 @@
 
             <div class="col grid_12_of_12">
             
-                    <?php if ( get_theme_mod('cta_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('cta_title')); ?></h3>
-                          <?php } else {  ?> <h3><?php esc_html_e('Home CTA', 'smartshop') ?></h3>
+                    <?php if ( get_theme_mod('cta_title') !='' ) {  ?><p><?php echo esc_html(get_theme_mod('cta_title')); ?></p>
+                          <?php } else {  ?> <p><?php esc_html_e('Home CTA', 'smartshop') ?></p>
                                <?php } ?>			
                         <?php if ( get_theme_mod('cta_text') !='' ) {  ?>
                         <p><?php echo esc_html(get_theme_mod('cta_text')); ?></p>
