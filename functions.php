@@ -2,9 +2,6 @@
 
 $edds_options = get_option('SS_THEME_settings');
 
-/* Include plugin activation file to install plugins */
-include get_template_directory() . '/includes/plugin-activation/plugin-details.php';
-
 if (!class_exists('smartshop_SL_Theme_Updater')) {
     // Load our custom theme updater
     include( dirname(__FILE__) . '/includes/theme-updater.php' );
