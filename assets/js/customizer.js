@@ -70,6 +70,11 @@
 			$( '.home-widget-one .featured-image' ).text( to );
 		} );
 	} );
+        wp.customize( 'home_title_one', function( value ) {
+		value.bind( function( to ) {
+			$( '.home-widget-one h3' ).text( to );
+		} );
+	} );
         
         wp.customize( 'home_text_one', function( value ) {
 		value.bind( function( to ) {
@@ -80,6 +85,30 @@
          wp.customize( 'home_featured_two', function( value ) {
 		value.bind( function( to ) {
 			$( '.home-widget-two .featured-image' ).text( to );
+		} );
+	} );
+        
+         wp.customize( 'home_title_two', function( value ) {
+		value.bind( function( to ) {
+			$( '.home-widget-two h3' ).text( to );
+		} );
+	} );
+        
+        wp.customize( 'home_text_two', function( value ) {
+		value.bind( function( to ) {
+			$( '.home-widget-two .featured-text' ).text( to );
+		} );
+	} );
+        
+        wp.customize( 'home_featured_three', function( value ) {
+		value.bind( function( to ) {
+			$( '.home-widget-three .featured-image' ).text( to );
+		} );
+	} );
+        
+         wp.customize( 'home_title_three', function( value ) {
+		value.bind( function( to ) {
+			$( '.home-widget-three h3' ).text( to );
 		} );
 	} );
         
