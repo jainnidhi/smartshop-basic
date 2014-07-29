@@ -35,7 +35,7 @@ function smartshop_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( esc_html__( 'Page %s', 'tatva' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( esc_html__( 'Page %s', 'smartshop' ), max( $paged, $page ) );
 	}
 
 	return $title;
