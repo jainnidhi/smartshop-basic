@@ -104,6 +104,10 @@ Source: http://unsplash.com/post/75618978410/download-by-paul-e-harrer
 Slider Image2 : slide2.jpg Copyright Drew Patrick Miller
 source: http://unsplash.com/post/85385371509/download-by-drew-patrick-miller 
 
+= 1.5.2 =
+- Updated theme options to Theme Customizer
+- Improved theme styling
+
 = 1.5.1 =
 - Updated 1rem to 10px
 - Updated button and form elements styling
