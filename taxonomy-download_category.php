@@ -34,7 +34,7 @@
                                     <?php
                                     if (edd_has_variable_prices(get_the_ID())) {
                                         // if the download has variable prices, show the first one as a starting price
-                                        printf( __('Starting at: %s','smartshop'), edd_price(get_the_ID()));
+                                       _e ('Starting at: ','smartshop'); echo edd_price(get_the_ID());
                                     } else {
                                         edd_price(get_the_ID());
                                     }

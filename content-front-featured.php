@@ -178,7 +178,7 @@
 
             <div class="col grid_12_of_12">
             
-                    <?php if ( get_theme_mod('cta_title') !='' ) {  ?><p><?php echo esc_html(get_theme_mod('cta_title')); ?></p>
+                    <?php if ( get_theme_mod('cta_title') !='' ) {  ?><h3><?php echo esc_html(get_theme_mod('cta_title')); ?></h3>
                           <?php } else {  ?> <h3><?php esc_html_e('Home CTA', 'smartshop') ?></h3>
                                <?php } ?>			
                         <?php if ( get_theme_mod('cta_text') !='' ) {  ?>
