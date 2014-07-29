@@ -92,7 +92,7 @@ class smartshop_SL_Theme_Updater {
                 return false;
 
             $api_params = array(
-                'smartshop_action' => 'get_version',
+                'edd_action' => 'get_version',
                 'license' => $this->license,
                 'name' => $this->item_name,
                 'slug' => $this->theme_slug,
