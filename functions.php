@@ -2,16 +2,6 @@
 
 $edds_options = get_option('SS_THEME_settings');
 
-if (!class_exists('smartshop_SL_Theme_Updater')) {
-    // Load our custom theme updater
-    include( dirname(__FILE__) . '/includes/theme-updater.php' );
-}
-
-// configuration file for theme licensing 
-// theme updater and licensing
-
-include(get_stylesheet_directory() . '/includes/theme-updater-config.php');
-
 /**
  * Add support for a custom header image.
  */
